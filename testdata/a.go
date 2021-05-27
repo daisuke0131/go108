@@ -23,3 +23,12 @@ func a_call5() string{
 	}
 	return a()
 }
+
+func a_call6() string{
+	a := func() string{
+		return func() string{
+			return ""
+		}()
+	}
+	return a()
+}

@@ -45,7 +45,7 @@ func main(){
 						switch r := e.(type) {
 						case *ast.BasicLit:
 							v, err := strconv.Unquote(r.Value)
-							if err != nil && v == "" {
+							if err == nil && v == "" {
 								fmt.Println("call empty")
 							}
 						case *ast.Ident:
